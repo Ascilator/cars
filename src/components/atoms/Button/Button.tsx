@@ -1,4 +1,5 @@
 import { Icon } from "./assets";
+import cx from "classnames";
 
 type ButtonProps = {
   text: string;
@@ -9,7 +10,10 @@ type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({ text, onClick, className }) => {
   return (
     <button
-      className="group relative flex items-center rounded-full border-none bg-black px-7 py-3 uppercase text-white duration-300 hover:pr-12 md:px-5 md:py-2 md:text-sm"
+      className={cx(
+        "group relative flex items-center rounded-full border-none bg-black px-7 py-3 uppercase text-white duration-300 hover:pr-12 md:px-5 md:py-2 md:text-sm",
+        className,
+      )}
       onClick={onClick}
     >
       {text}

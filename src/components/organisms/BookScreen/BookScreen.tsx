@@ -11,7 +11,7 @@ export const BookScreen: React.FC = () => {
   const { mobileWidth } = useMobile();
 
   const height = mobileWidth > 1000 ? 8000 : 6000;
-  const imgHeight = Math.min(window.innerHeight, window.innerWidth);
+  const imgHeight = Math.min(window.innerHeight, window.innerWidth) * 0.8;
   const imgWidth = imgHeight * 0.7;
 
   const scrollHandler = () => {
